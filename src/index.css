@@ -1,0 +1,281 @@
+/* ============================================================
+   Global Design System — Tailwind CSS v4
+   ============================================================ */
+@import "tailwindcss";
+
+/* ── Custom Design Tokens ──────────────────────────────────── */
+@theme {
+  --color-primary:       #050816;
+  --color-secondary:     #0d0d2b;
+  --color-surface:       #111132;
+  --color-accent-blue:   #2563eb;
+  --color-neon-blue:     #4f8eff;
+  --color-neon-purple:   #a855f7;
+  --color-neon-cyan:     #22d3ee;
+  --color-text-primary:  #f0f4ff;
+  --color-text-muted:    #8892b0;
+  --color-border:        rgba(79, 142, 255, 0.2);
+
+  --font-sans: 'Inter', 'Outfit', system-ui, sans-serif;
+
+  --radius-card: 1.25rem;
+  --shadow-neon-blue: 0 0 20px rgba(79, 142, 255, 0.4);
+  --shadow-neon-purple: 0 0 20px rgba(168, 85, 247, 0.4);
+}
+
+/* ── Base Reset ────────────────────────────────────────────── */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
+html {
+  scroll-behavior: smooth;
+  text-size-adjust: 100%;
+}
+
+body {
+  background-color: var(--color-primary);
+  color: var(--color-text-primary);
+  font-family: var(--font-sans);
+  line-height: 1.6;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ── Scrollbar ─────────────────────────────────────────────── */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--color-secondary); }
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, var(--color-neon-blue), var(--color-neon-purple));
+  border-radius: 3px;
+}
+
+/* ── Utility Classes ───────────────────────────────────────── */
+.section-padding {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .section-padding {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  .section-padding {
+    padding-left: 6rem;
+    padding-right: 6rem;
+  }
+}
+
+.max-container {
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
+
+/* ── Gradient Text ─────────────────────────────────────────── */
+.gradient-text {
+  background: linear-gradient(135deg, var(--color-neon-blue) 0%, var(--color-neon-purple) 50%, var(--color-neon-cyan) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ── Glassmorphism Card ────────────────────────────────────── */
+.glass-card {
+  background: rgba(17, 17, 50, 0.7);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-card);
+}
+
+/* ── Neon Border Glow ──────────────────────────────────────── */
+.neon-border {
+  border: 1px solid transparent;
+  background:
+    linear-gradient(var(--color-surface), var(--color-surface)) padding-box,
+    linear-gradient(135deg, var(--color-neon-blue), var(--color-neon-purple)) border-box;
+  border-radius: var(--radius-card);
+}
+
+/* ── Section Label ─────────────────────────────────────────── */
+.section-label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--color-neon-blue);
+}
+
+/* ── Heading Sizes ─────────────────────────────────────────── */
+.heading-xl {
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+}
+
+.heading-lg {
+  font-size: clamp(1.75rem, 4vw, 3rem);
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.heading-md {
+  font-size: clamp(1.25rem, 2.5vw, 1.75rem);
+  font-weight: 600;
+}
+
+/* ── CTA Button ────────────────────────────────────────────── */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.875rem 2rem;
+  background: linear-gradient(135deg, var(--color-neon-blue), var(--color-neon-purple));
+  color: #fff;
+  font-weight: 600;
+  font-size: 1rem;
+  border-radius: 50px;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  text-decoration: none;
+}
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 30px rgba(79, 142, 255, 0.45);
+}
+.btn-primary:active { transform: translateY(0); }
+
+.btn-outline {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.75rem;
+  border: 1px solid var(--color-neon-blue);
+  color: var(--color-neon-blue);
+  font-weight: 600;
+  font-size: 0.9rem;
+  border-radius: 50px;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-decoration: none;
+}
+.btn-outline:hover {
+  background: rgba(79, 142, 255, 0.1);
+  box-shadow: var(--shadow-neon-blue);
+}
+
+/* ── Badge / Tag ───────────────────────────────────────────── */
+.tech-badge {
+  display: inline-block;
+  padding: 0.2rem 0.65rem;
+  background: rgba(79, 142, 255, 0.12);
+  border: 1px solid rgba(79, 142, 255, 0.3);
+  color: var(--color-neon-blue);
+  font-size: 0.75rem;
+  font-weight: 500;
+  border-radius: 50px;
+}
+
+/* ── Timeline ──────────────────────────────────────────────── */
+.timeline-line {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(180deg, var(--color-neon-blue), var(--color-neon-purple), transparent);
+}
+
+/* ── Canvas Wrapper ────────────────────────────────────────── */
+.canvas-wrapper {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+/* ── Particle Overlay ──────────────────────────────────────── */
+.particle-overlay {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* ── Section Divider ───────────────────────────────────────── */
+.section-divider {
+  width: 80px;
+  height: 4px;
+  border-radius: 2px;
+  background: linear-gradient(90deg, var(--color-neon-blue), var(--color-neon-purple));
+  margin: 1rem 0 2rem;
+}
+
+/* ── Card Hover Tilt ───────────────────────────────────────── */
+.tilt-card {
+  transform-style: preserve-3d;
+  transform: perspective(1000px);
+  transition: transform 0.3s ease;
+  will-change: transform;
+}
+
+/* ── Input Fields ──────────────────────────────────────────── */
+.form-input {
+  width: 100%;
+  padding: 0.875rem 1.25rem;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--color-border);
+  border-radius: 0.75rem;
+  color: var(--color-text-primary);
+  font-family: var(--font-sans);
+  font-size: 0.95rem;
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+.form-input::placeholder { color: var(--color-text-muted); }
+.form-input:focus {
+  border-color: var(--color-neon-blue);
+  box-shadow: 0 0 0 3px rgba(79, 142, 255, 0.15);
+}
+
+/* ── Animations ────────────────────────────────────────────── */
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-12px); }
+}
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 0 8px rgba(79,142,255,0.3); }
+  50% { box-shadow: 0 0 24px rgba(79,142,255,0.7); }
+}
+@keyframes spin-slow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.animate-float { animation: float 4s ease-in-out infinite; }
+.animate-pulse-glow { animation: pulse-glow 2s ease-in-out infinite; }
+.animate-spin-slow { animation: spin-slow 8s linear infinite; }
+.animate-fade-up { animation: fadeInUp 0.6s ease forwards; }
