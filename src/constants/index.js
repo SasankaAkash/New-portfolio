@@ -4,12 +4,14 @@
 
 // Navigation Links
 export const navLinks = [
-  { id: "hero", label: "Home" },
-  { id: "showcase", label: "Projects" },
-  { id: "experience", label: "Experience" },
-  { id: "tech", label: "Skills" },
+  { id: "hero",           label: "Home"         },
+  { id: "showcase",       label: "Projects"     },
+  { id: "experience",     label: "Experience"   },
+  { id: "tech",           label: "Skills"       },
   { id: "certifications", label: "Certifications" },
-  { id: "contact", label: "Contact" },
+  { id: "journal",        label: "Journal"      },
+  { id: "career",         label: "Career Plan"  },
+  { id: "contact",        label: "Contact"      },
 ];
 
 // Featured Projects
@@ -107,27 +109,27 @@ export const experiences = [
 // Technologies / Skills
 export const technologies = [
   // Frontend
-  { name: "React.js",      category: "Frontend",  icon: "react.png",         color: "#61dafb" },
-  { name: "Next.js",       category: "Frontend",  icon: "next js.jfif",      color: "#ffffff" },
-  { name: "React Native",  category: "Frontend",  icon: "react native.png",  color: "#61dafb" },
-  { name: "JavaScript",    category: "Frontend",  icon: "java script.png",   color: "#f7df1e" },
-  { name: "Tailwind CSS",  category: "Frontend",  icon: "tailwind css.png",  color: "#38bdf8" },
-  { name: "HTML5",         category: "Frontend",  icon: "html 5.png",        color: "#e34f26" },
+  { name: "React.js", category: "Frontend", icon: "react.png", color: "#61dafb" },
+  { name: "Next.js", category: "Frontend", icon: "next js.jfif", color: "#ffffff" },
+  { name: "React Native", category: "Frontend", icon: "react native.png", color: "#61dafb" },
+  { name: "JavaScript", category: "Frontend", icon: "java script.png", color: "#f7df1e" },
+  { name: "Tailwind CSS", category: "Frontend", icon: "tailwind css.png", color: "#38bdf8" },
+  { name: "HTML5", category: "Frontend", icon: "html 5.png", color: "#e34f26" },
   // Backend
-  { name: "Node.js",       category: "Backend",   icon: "node js.png",       color: "#68a063" },
-  { name: "Express.js",    category: "Backend",   icon: "express js.png",    color: "#ffffff" },
-  { name: "Spring Boot",   category: "Backend",   icon: "springboot.png",    color: "#6db33f" },
-  { name: "FastAPI",       category: "Backend",   icon: "fast api.png",      color: "#009688" },
-  { name: "Python",        category: "Backend",   icon: "python.jfif",       color: "#3776ab" },
-  { name: "Java",          category: "Backend",   icon: "java.png",          color: "#f89820" },
+  { name: "Node.js", category: "Backend", icon: "node js.png", color: "#68a063" },
+  { name: "Express.js", category: "Backend", icon: "express js.png", color: "#ffffff" },
+  { name: "Spring Boot", category: "Backend", icon: "springboot.png", color: "#6db33f" },
+  { name: "FastAPI", category: "Backend", icon: "fast api.png", color: "#009688" },
+  { name: "Python", category: "Backend", icon: "python.jfif", color: "#3776ab" },
+  { name: "Java", category: "Backend", icon: "java.png", color: "#f89820" },
   // Database
-  { name: "MongoDB",       category: "Database",  icon: "mongo db.png",      color: "#4db33d" },
-  { name: "MySQL",         category: "Database",  icon: "my sql.png",        color: "#4479a1" },
+  { name: "MongoDB", category: "Database", icon: "mongo db.png", color: "#4db33d" },
+  { name: "MySQL", category: "Database", icon: "my sql.png", color: "#4479a1" },
   // Tools
-  { name: "Docker",        category: "Tools",     icon: "docker.png",        color: "#2496ed" },
-  { name: "Postman",       category: "Tools",     icon: "postman.svg",       color: "#ff6c37" },
-  { name: "VS Code",       category: "Tools",     icon: "vscode.png",        color: "#007acc" },
-  { name: "Git",           category: "Tools",     icon: "gtihub.png",        color: "#f05032" },
+  { name: "Docker", category: "Tools", icon: "docker.png", color: "#2496ed" },
+  { name: "Postman", category: "Tools", icon: "postman.svg", color: "#ff6c37" },
+  { name: "VS Code", category: "Tools", icon: "vscode.png", color: "#007acc" },
+  { name: "Git", category: "Tools", icon: "gtihub.png", color: "#f05032" },
 ];
 
 // Certifications & Licenses
@@ -140,7 +142,7 @@ export const certifications = [
     icon: "🧠",
     color: "#10a37f",
     category: "AI / Machine Learning",
-    credential: "https://drive.google.com/open?id=1SxaZ13Sug8PgkbhJu_MiK_A6ATM1wOqo",
+    credential: "https://drive.google.com/file/d/1SxaZ13Sug8PgkbhJu_MiK_A6ATM1wOqo/view?usp=drive_link",
   },
   {
     id: 2,
@@ -150,7 +152,7 @@ export const certifications = [
     icon: "🤖",
     color: "#06b6d4",
     category: "AI / Machine Learning",
-    credential: "https://drive.google.com/open?id=1ya2X6KArITEESY2QTnN-HVOXISFbWv_v",
+    credential: "https://drive.google.com/file/d/1yaZX6KArTFEsSY2QTnN-HVOXISFbWv-v/view?usp=drive_link",
   },
   {
     id: 3,
@@ -160,7 +162,7 @@ export const certifications = [
     icon: "⚡",
     color: "#742774",
     category: "Low-Code / Cloud",
-    credential: "https://drive.google.com/open?id=1_Ll8ZDrgP0Drib6il6Xk1a4xmNIcaT8",
+    credential: "https://drive.google.com/file/d/1_Lf8i2DrgP0Drib6it6Xk1a4xmtNcaT8/view?usp=drive_link",
   },
   {
     id: 4,
@@ -170,7 +172,7 @@ export const certifications = [
     icon: "✨",
     color: "#f59e0b",
     category: "AI / Machine Learning",
-    credential: "https://drive.google.com/open?id=1oB36JV68aooRv-1Fd8uwmoCmBayuJ1cx",
+    credential: "https://drive.google.com/file/d/1oB36JV68acoRv-1Fd8uwmcCmBayuJ1cx/view?usp=drive_link",
   },
   {
     id: 5,
@@ -180,7 +182,7 @@ export const certifications = [
     icon: "🔗",
     color: "#ea4b71",
     category: "AI / Automation",
-    credential: "https://drive.google.com/open?id=1qAQ0m5l0lnAfq98f3XmOQ4bl0v7otKz",
+    credential: "https://drive.google.com/file/d/1qAQ0m5l0lnAflq98t3XmOQ4bl0v7otKz/view?usp=drive_link",
   },
   {
     id: 6,
@@ -190,7 +192,7 @@ export const certifications = [
     icon: "🐍",
     color: "#3776ab",
     category: "Programming",
-    credential: "https://drive.google.com/open?id=1b6IWQlgmd2ar-MSFGBySycOl_WnQvW55",
+    credential: "https://drive.google.com/file/d/1b6IWQIgmd2ar-MSEG8ySyoOl_WnQvW55/view?usp=drive_link",
   },
   {
     id: 7,
@@ -200,7 +202,7 @@ export const certifications = [
     icon: "🟨",
     color: "#f7df1e",
     category: "Frontend",
-    credential: "https://drive.google.com/open?id=1-spgN89-hJ1Z-L3ZzoFqC4Yo6avmCKH",
+    credential: "https://drive.google.com/file/d/1-spgN89-hJT2r-L3Zp0FqC4Yo0evnCKH/view?usp=drive_link",
   },
   {
     id: 8,
@@ -210,7 +212,7 @@ export const certifications = [
     icon: "🎨",
     color: "#38bdf8",
     category: "Frontend",
-    credential: "https://drive.google.com/open?id=1JgagQdb0pFhrHQ5avlMCllk7KDXCbYNKC",
+    credential: "https://drive.google.com/file/d/11JgagQdb6pFIvHQ5aeMCIk7KDXCbYNKC/view?usp=drive_link",
   },
   {
     id: 9,
@@ -220,7 +222,7 @@ export const certifications = [
     icon: "🌐",
     color: "#e34f26",
     category: "Frontend",
-    credential: "https://drive.google.com/open?id=1ELALW0Qd7zENRNh1Nro03NUJo7C0h-ep",
+    credential: "https://drive.google.com/file/d/1ELALW0Qd7zENRNh1Nro03NUJo7C0h-ep/view?usp=drive_link",
   },
 ];
 

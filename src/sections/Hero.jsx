@@ -181,6 +181,45 @@ export default function Hero() {
               }}>
                 Get In Touch
               </a>
+              <a
+                href="https://drive.google.com/file/d/1VsgWM7awtoD_yqRNzJphgU1q9q0kmnWg/view?usp=sharing"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{
+                  display: 'inline-flex',
+                  alignItems: 'center',
+                  gap: '0.5rem',
+                  padding: '0.75rem 1.5rem',
+                  background: 'linear-gradient(135deg, rgba(16,163,127,0.15), rgba(6,182,212,0.1))',
+                  border: '1px solid rgba(16,163,127,0.4)',
+                  borderRadius: '50px',
+                  color: '#10a37f',
+                  fontWeight: 600,
+                  fontSize: '0.95rem',
+                  textDecoration: 'none',
+                  transition: 'all 0.25s ease',
+                  cursor: 'pointer',
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.background = 'linear-gradient(135deg, rgba(16,163,127,0.28), rgba(6,182,212,0.18))';
+                  e.currentTarget.style.borderColor = 'rgba(16,163,127,0.7)';
+                  e.currentTarget.style.transform = 'translateY(-2px)';
+                  e.currentTarget.style.boxShadow = '0 8px 25px rgba(16,163,127,0.2)';
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.background = 'linear-gradient(135deg, rgba(16,163,127,0.15), rgba(6,182,212,0.1))';
+                  e.currentTarget.style.borderColor = 'rgba(16,163,127,0.4)';
+                  e.currentTarget.style.transform = 'translateY(0)';
+                  e.currentTarget.style.boxShadow = 'none';
+                }}
+              >
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2">
+                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                  <polyline points="7 10 12 15 17 10"/>
+                  <line x1="12" y1="15" x2="12" y2="3"/>
+                </svg>
+                Download CV
+              </a>
             </div>
 
             {/* Stats row */}

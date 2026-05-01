@@ -6,6 +6,8 @@ import Showcase from './sections/Showcase';
 import Experience from './sections/Experience';
 import TechStack from './sections/TechStack';
 import Certifications from './sections/Certifications';
+import ReflectiveJournal from './sections/ReflectiveJournal';
+import CareerPlan from './sections/CareerPlan';
 import Contact from './sections/Contact';
 
 /* ── Loading fallback ───────────────────────────────────────── */
@@ -44,6 +46,8 @@ export default function App() {
           <Experience />
           <TechStack />
           <Certifications />
+          <ReflectiveJournal />
+          <CareerPlan />
           <Contact />
         </Suspense>
       </main>
