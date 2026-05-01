@@ -1,6 +1,6 @@
 import { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
-import HeroCanvas from '../components/canvas/HeroCanvas';
+import portfolioImg from '../assets/portfolio.png';
 
 export default function Hero() {
   const headingRef = useRef(null);
@@ -208,9 +208,31 @@ export default function Hero() {
             </div>
           </div>
 
-          {/* Right — Three.js Shader Animation */}
-          <div style={{ height: '600px', position: 'relative' }} className="hero-canvas">
-            <HeroCanvas />
+          {/* Right — Profile Photo */}
+          <div
+            style={{
+              height: '600px',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+            }}
+            className="hero-canvas"
+          >
+            <img
+              src={portfolioImg}
+              alt="Sasanka Akash — Full Stack Developer"
+              style={{
+                width: '100%',
+                maxWidth: 460,
+                height: '100%',
+                maxHeight: 520,
+                objectFit: 'cover',
+                objectPosition: 'top center',
+                borderRadius: '1.5rem',
+                border: '1px solid rgba(79,142,255,0.25)',
+                boxShadow: '0 0 40px rgba(79,142,255,0.12), 0 0 80px rgba(168,85,247,0.06)',
+              }}
+            />
           </div>
         </div>
 

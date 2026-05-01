@@ -3,9 +3,50 @@ import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { technologies } from '../constants';
 
+// Asset image imports
+import imgReact        from '../assets/react.png';
+import imgNextJs       from '../assets/next js.jfif';
+import imgReactNative  from '../assets/react native.png';
+import imgJavaScript   from '../assets/java script.png';
+import imgTailwind     from '../assets/tailwind css.png';
+import imgHtml5        from '../assets/html 5.png';
+import imgNodeJs       from '../assets/node js.png';
+import imgExpressJs    from '../assets/express js.png';
+import imgSpringBoot   from '../assets/springboot.png';
+import imgFastApi      from '../assets/fast api.png';
+import imgPython       from '../assets/python.jfif';
+import imgJava         from '../assets/java.png';
+import imgMongoDB      from '../assets/mongo db.png';
+import imgMySQL        from '../assets/my sql.png';
+import imgDocker       from '../assets/docker.png';
+import imgPostman      from '../assets/postman.svg';
+import imgVsCode       from '../assets/vscode.png';
+import imgGit          from '../assets/gtihub.png';
+
+const iconMap = {
+  'react.png':        imgReact,
+  'next js.jfif':     imgNextJs,
+  'react native.png': imgReactNative,
+  'java script.png':  imgJavaScript,
+  'tailwind css.png': imgTailwind,
+  'html 5.png':       imgHtml5,
+  'node js.png':      imgNodeJs,
+  'express js.png':   imgExpressJs,
+  'springboot.png':   imgSpringBoot,
+  'fast api.png':     imgFastApi,
+  'python.jfif':      imgPython,
+  'java.png':         imgJava,
+  'mongo db.png':     imgMongoDB,
+  'my sql.png':       imgMySQL,
+  'docker.png':       imgDocker,
+  'postman.svg':      imgPostman,
+  'vscode.png':       imgVsCode,
+  'gtihub.png':       imgGit,
+};
+
 gsap.registerPlugin(ScrollTrigger);
 
-const categories = ['Frontend', 'Backend', 'DevOps', 'Tools'];
+const categories = ['Frontend', 'Backend', 'Database', 'Tools'];
 
 function TechCard({ tech, index }) {
   const [hovered, setHovered] = useState(false);
@@ -34,7 +75,6 @@ function TechCard({ tech, index }) {
         backdropFilter: 'blur(8px)',
       }}
     >
-      {/* Icon ring */}
       <div style={{
         width: 56,
         height: 56,
@@ -46,11 +86,15 @@ function TechCard({ tech, index }) {
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
-        fontSize: '1.6rem',
+        overflow: 'hidden',
         transition: 'all 0.3s ease',
         transform: hovered ? 'rotate(10deg)' : 'rotate(0deg)',
       }}>
-        {tech.icon}
+        <img
+          src={iconMap[tech.icon]}
+          alt={tech.name}
+          style={{ width: 34, height: 34, objectFit: 'contain' }}
+        />
       </div>
 
       {/* Name */}

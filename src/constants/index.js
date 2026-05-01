@@ -106,24 +106,28 @@ export const experiences = [
 
 // Technologies / Skills
 export const technologies = [
-  { name: "React.js", category: "Frontend", icon: "⚛️", color: "#61dafb" },
-  { name: "Next.js", category: "Frontend", icon: "▲", color: "#ffffff" },
-  { name: "React Native", category: "Frontend", icon: "📱", color: "#61dafb" },
-  { name: "JavaScript", category: "Frontend", icon: "🟨", color: "#f7df1e" },
-  { name: "Tailwind CSS", category: "Frontend", icon: "🎨", color: "#38bdf8" },
-  { name: "HTML5 / CSS3", category: "Frontend", icon: "🌐", color: "#e34f26" },
-  { name: "Node.js", category: "Backend", icon: "🟢", color: "#68a063" },
-  { name: "Express.js", category: "Backend", icon: "🚂", color: "#ffffff" },
-  { name: "Spring Boot", category: "Backend", icon: "🍃", color: "#6db33f" },
-  { name: "Java", category: "Backend", icon: "☕", color: "#f89820" },
-  { name: "MongoDB", category: "Backend", icon: "🍃", color: "#4db33d" },
-  { name: "MySQL", category: "Backend", icon: "🐬", color: "#4479a1" },
-  { name: "Docker", category: "DevOps", icon: "🐳", color: "#2496ed" },
-  { name: "Microservices", category: "DevOps", icon: "⚙️", color: "#a855f7" },
-  { name: "Git", category: "Tools", icon: "🔀", color: "#f05032" },
-  { name: "Figma", category: "Tools", icon: "🎭", color: "#f24e1e" },
-  { name: "Python", category: "AI/ML", icon: "🐍", color: "#3776ab" },
-  { name: "OpenAI API", category: "AI/ML", icon: "🤖", color: "#10a37f" },
+  // Frontend
+  { name: "React.js",      category: "Frontend",  icon: "react.png",         color: "#61dafb" },
+  { name: "Next.js",       category: "Frontend",  icon: "next js.jfif",      color: "#ffffff" },
+  { name: "React Native",  category: "Frontend",  icon: "react native.png",  color: "#61dafb" },
+  { name: "JavaScript",    category: "Frontend",  icon: "java script.png",   color: "#f7df1e" },
+  { name: "Tailwind CSS",  category: "Frontend",  icon: "tailwind css.png",  color: "#38bdf8" },
+  { name: "HTML5",         category: "Frontend",  icon: "html 5.png",        color: "#e34f26" },
+  // Backend
+  { name: "Node.js",       category: "Backend",   icon: "node js.png",       color: "#68a063" },
+  { name: "Express.js",    category: "Backend",   icon: "express js.png",    color: "#ffffff" },
+  { name: "Spring Boot",   category: "Backend",   icon: "springboot.png",    color: "#6db33f" },
+  { name: "FastAPI",       category: "Backend",   icon: "fast api.png",      color: "#009688" },
+  { name: "Python",        category: "Backend",   icon: "python.jfif",       color: "#3776ab" },
+  { name: "Java",          category: "Backend",   icon: "java.png",          color: "#f89820" },
+  // Database
+  { name: "MongoDB",       category: "Database",  icon: "mongo db.png",      color: "#4db33d" },
+  { name: "MySQL",         category: "Database",  icon: "my sql.png",        color: "#4479a1" },
+  // Tools
+  { name: "Docker",        category: "Tools",     icon: "docker.png",        color: "#2496ed" },
+  { name: "Postman",       category: "Tools",     icon: "postman.svg",       color: "#ff6c37" },
+  { name: "VS Code",       category: "Tools",     icon: "vscode.png",        color: "#007acc" },
+  { name: "Git",           category: "Tools",     icon: "gtihub.png",        color: "#f05032" },
 ];
 
 // Certifications & Licenses
