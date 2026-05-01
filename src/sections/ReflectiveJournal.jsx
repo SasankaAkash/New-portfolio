@@ -143,27 +143,33 @@ function JournalCard({ entry }) {
 
 export default function ReflectiveJournal() {
   const headingRef = useRef(null);
-  const quoteRef   = useRef(null);
-  const gridRef    = useRef(null);
+  const quoteRef = useRef(null);
+  const gridRef = useRef(null);
 
   useEffect(() => {
     const ctx = gsap.context(() => {
       gsap.fromTo(headingRef.current,
         { opacity: 0, y: 40 },
-        { opacity: 1, y: 0, duration: 0.8,
-          scrollTrigger: { trigger: headingRef.current, start: 'top 80%' } }
+        {
+          opacity: 1, y: 0, duration: 0.8,
+          scrollTrigger: { trigger: headingRef.current, start: 'top 80%' }
+        }
       );
       gsap.fromTo(quoteRef.current,
         { opacity: 0, x: -30 },
-        { opacity: 1, x: 0, duration: 0.8, delay: 0.2,
-          scrollTrigger: { trigger: quoteRef.current, start: 'top 85%' } }
+        {
+          opacity: 1, x: 0, duration: 0.8, delay: 0.2,
+          scrollTrigger: { trigger: quoteRef.current, start: 'top 85%' }
+        }
       );
       const cards = gridRef.current?.querySelectorAll('[data-journal-card]');
       if (cards) {
         gsap.fromTo(cards,
           { opacity: 0, y: 50 },
-          { opacity: 1, y: 0, duration: 0.6, stagger: 0.1, ease: 'power3.out',
-            scrollTrigger: { trigger: gridRef.current, start: 'top 78%' } }
+          {
+            opacity: 1, y: 0, duration: 0.6, stagger: 0.1, ease: 'power3.out',
+            scrollTrigger: { trigger: gridRef.current, start: 'top 78%' }
+          }
         );
       }
     });
@@ -186,23 +192,6 @@ export default function ReflectiveJournal() {
             lessons that have shaped my professional identity.
           </p>
         </div>
-
-        {/* Pull quote */}
-        <div ref={quoteRef} style={{
-          borderLeft: '3px solid #4f8eff',
-          paddingLeft: '1.5rem',
-          marginBottom: '3rem',
-          maxWidth: 700, margin: '0 auto 3rem',
-        }}>
-          <p style={{ fontSize: '1.05rem', fontStyle: 'italic', color: '#ccd6f6', lineHeight: 1.8 }}>
-            "PPW didn't just teach me how to write a CV — it taught me how to understand myself as a
-            professional, communicate my value, and continuously grow with intention."
-          </p>
-          <span style={{ fontSize: '0.82rem', color: '#8892b0', marginTop: '0.5rem', display: 'block' }}>
-            — Sasanka Akash Jayasuriya, IT Undergraduate, SLIIT
-          </span>
-        </div>
-
         {/* Journal cards grid */}
         <div
           ref={gridRef}

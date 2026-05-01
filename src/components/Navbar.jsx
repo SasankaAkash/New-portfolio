@@ -78,13 +78,13 @@ export default function Navbar() {
               borderRadius: "50%",
               backgroundImage: "url('assets/logo.png')",
               backgroundSize: "cover",
-              backgroundPosition: "center", 
+              backgroundPosition: "center",
               display: "flex",
               alignItems: "center",
               justifyContent: "center",
             }}
           >
-           
+
           </div>
           <span
             style={{
@@ -145,7 +145,7 @@ export default function Navbar() {
 
         {/* CTA */}
         <a
-          href="mailto:akashsasanka480@gmail.com"
+          href="https://drive.google.com/file/d/1ZmbRIO4GJ7UGVmNM2sJygjV0vL_Ntd90/view?usp=drive_link"
           className="btn-primary"
           style={{
             fontSize: "0.85rem",
@@ -153,7 +153,7 @@ export default function Navbar() {
             display: window.innerWidth < 768 ? "none" : "inline-flex",
           }}
         >
-          Hire Me
+          Download my CV
         </a>
 
         {/* Hamburger */}
