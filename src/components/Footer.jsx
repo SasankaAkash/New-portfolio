@@ -55,7 +55,7 @@ export default function Footer() {
 
         <p style={{ color: '#8892b0', fontSize: '0.85rem' }}>
           Designed & built by{' '}
-          <span className="gradient-text" style={{ fontWeight: 600 }}>Alex Dev</span>
+          <span className="gradient-text" style={{ fontWeight: 600 }}>Sasanka Akash</span>
         </p>
         <p style={{ color: '#4a5568', fontSize: '0.8rem', marginTop: '0.4rem' }}>
           © {new Date().getFullYear()} All rights reserved.

@@ -75,10 +75,10 @@ export default function Navbar() {
             fontWeight: 800,
             color: '#fff',
           }}>
-            A
+            S
           </div>
           <span style={{ color: '#f0f4ff', fontWeight: 700, fontSize: '1.1rem', letterSpacing: '-0.02em' }}>
-            Alex<span style={{ color: '#4f8eff' }}>Dev</span>
+            Sasanka<span style={{ color: '#4f8eff' }}> Akash</span>
           </span>
         </button>
 
@@ -117,7 +117,7 @@ export default function Navbar() {
 
         {/* CTA */}
         <a
-          href="mailto:hello@alexdev.com"
+          href="mailto:akashsasanka480@gmail.com"
           className="btn-primary"
           style={{ fontSize: '0.85rem', padding: '0.6rem 1.4rem', display: window.innerWidth < 768 ? 'none' : 'inline-flex' }}
         >

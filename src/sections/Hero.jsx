@@ -1,8 +1,6 @@
-import { useEffect, useRef, Suspense, lazy } from 'react';
+import { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
-
-// Lazy-load the heavy 3D canvas
-const RoomCanvas = lazy(() => import('../components/canvas/RoomCanvas'));
+import HeroCanvas from '../components/canvas/HeroCanvas';
 
 export default function Hero() {
   const headingRef = useRef(null);
@@ -49,6 +47,8 @@ export default function Hero() {
         { opacity: 0, y: 20, scale: 0.95 },
         { opacity: 1, y: 0, scale: 1, duration: 0.6, ease: 'back.out(1.7)', delay: 1.6 }
       );
+
+
     });
 
     return () => ctx.revert();
@@ -137,7 +137,7 @@ export default function Hero() {
                 <span className="word" style={{ display: 'inline-block', marginRight: '0.3em', color: '#f0f4ff' }}>I'm</span>
               </div>
               <div style={{ overflow: 'hidden' }}>
-                <span className="word gradient-text" style={{ display: 'inline-block' }}>Alex Dev</span>
+                <span className="word gradient-text" style={{ display: 'inline-block' }}>Sasanka Akash</span>
               </div>
             </div>
 
@@ -149,7 +149,7 @@ export default function Hero() {
                 color: '#8892b0',
               }}>
                 Full Stack Developer &{' '}
-                <span style={{ color: '#a855f7' }}>3D Web Engineer</span>
+                <span style={{ color: '#a855f7' }}>AI/ML Enthusiast</span>
               </h2>
             </div>
 
@@ -162,9 +162,9 @@ export default function Hero() {
               marginBottom: '2.5rem',
               opacity: 0,
             }}>
-              I craft immersive digital experiences that blend cutting-edge 3D graphics
-              with performant web applications. Turning complex ideas into beautiful,
-              user-centric products.
+              IT undergraduate with 6 months of hands-on internship experience in full-stack
+              development using MERN stack, React Native, Spring Boot & Next.js.
+              Certified AI/ML Engineer (SLIIT) currently conducting research in the field.
             </p>
 
             {/* CTA Row */}
@@ -192,9 +192,9 @@ export default function Hero() {
               borderTop: '1px solid rgba(79,142,255,0.12)',
             }}>
               {[
-                { value: '5+', label: 'Years Exp.' },
-                { value: '40+', label: 'Projects' },
-                { value: '15+', label: 'Happy Clients' },
+                { value: '6mo', label: 'Internship Exp.' },
+                { value: '4+', label: 'Projects' },
+                { value: '2+', label: 'Certifications' },
               ].map((stat) => (
                 <div key={stat.label}>
                   <div style={{ fontSize: '1.75rem', fontWeight: 800, color: '#4f8eff', lineHeight: 1 }}>
@@ -208,32 +208,9 @@ export default function Hero() {
             </div>
           </div>
 
-          {/* Right — 3D Canvas */}
+          {/* Right — Three.js Shader Animation */}
           <div style={{ height: '600px', position: 'relative' }} className="hero-canvas">
-            <Suspense fallback={
-              <div style={{
-                height: '100%',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                color: '#8892b0',
-              }}>
-                <div style={{ textAlign: 'center' }}>
-                  <div style={{
-                    width: 48,
-                    height: 48,
-                    border: '3px solid rgba(79,142,255,0.3)',
-                    borderTop: '3px solid #4f8eff',
-                    borderRadius: '50%',
-                    animation: 'spin-slow 1s linear infinite',
-                    margin: '0 auto 1rem',
-                  }} />
-                  Loading 3D scene...
-                </div>
-              </div>
-            }>
-              <RoomCanvas />
-            </Suspense>
+            <HeroCanvas />
           </div>
         </div>
 
@@ -275,7 +252,7 @@ export default function Hero() {
       <style>{`
         @media (max-width: 900px) {
           .hero-grid { grid-template-columns: 1fr !important; }
-          .hero-canvas { height: 350px !important; order: -1; }
+          .hero-canvas { height: 380px !important; order: -1; }
         }
       `}</style>
     </section>

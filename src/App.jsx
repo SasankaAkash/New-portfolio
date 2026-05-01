@@ -5,7 +5,7 @@ import Hero from './sections/Hero';
 import Showcase from './sections/Showcase';
 import Experience from './sections/Experience';
 import TechStack from './sections/TechStack';
-import Testimonials from './sections/Testimonials';
+import Certifications from './sections/Certifications';
 import Contact from './sections/Contact';
 
 /* ── Loading fallback ───────────────────────────────────────── */
@@ -43,7 +43,7 @@ export default function App() {
           <Showcase />
           <Experience />
           <TechStack />
-          <Testimonials />
+          <Certifications />
           <Contact />
         </Suspense>
       </main>
