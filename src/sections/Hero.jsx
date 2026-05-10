@@ -1,6 +1,6 @@
 import { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
-import HeroCanvas from '../components/canvas/HeroCanvas';
+import portfolioImg from '../assets/portfolio.png';
 
 export default function Hero() {
   const headingRef = useRef(null);
@@ -181,6 +181,45 @@ export default function Hero() {
               }}>
                 Get In Touch
               </a>
+              <a
+                href="https://drive.google.com/file/d/1VsgWM7awtoD_yqRNzJphgU1q9q0kmnWg/view?usp=sharing"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{
+                  display: 'inline-flex',
+                  alignItems: 'center',
+                  gap: '0.5rem',
+                  padding: '0.75rem 1.5rem',
+                  background: 'linear-gradient(135deg, rgba(16,163,127,0.15), rgba(6,182,212,0.1))',
+                  border: '1px solid rgba(16,163,127,0.4)',
+                  borderRadius: '50px',
+                  color: '#10a37f',
+                  fontWeight: 600,
+                  fontSize: '0.95rem',
+                  textDecoration: 'none',
+                  transition: 'all 0.25s ease',
+                  cursor: 'pointer',
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.background = 'linear-gradient(135deg, rgba(16,163,127,0.28), rgba(6,182,212,0.18))';
+                  e.currentTarget.style.borderColor = 'rgba(16,163,127,0.7)';
+                  e.currentTarget.style.transform = 'translateY(-2px)';
+                  e.currentTarget.style.boxShadow = '0 8px 25px rgba(16,163,127,0.2)';
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.background = 'linear-gradient(135deg, rgba(16,163,127,0.15), rgba(6,182,212,0.1))';
+                  e.currentTarget.style.borderColor = 'rgba(16,163,127,0.4)';
+                  e.currentTarget.style.transform = 'translateY(0)';
+                  e.currentTarget.style.boxShadow = 'none';
+                }}
+              >
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2">
+                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                  <polyline points="7 10 12 15 17 10"/>
+                  <line x1="12" y1="15" x2="12" y2="3"/>
+                </svg>
+                Download CV
+              </a>
             </div>
 
             {/* Stats row */}
@@ -208,9 +247,31 @@ export default function Hero() {
             </div>
           </div>
 
-          {/* Right — Three.js Shader Animation */}
-          <div style={{ height: '600px', position: 'relative' }} className="hero-canvas">
-            <HeroCanvas />
+          {/* Right — Profile Photo */}
+          <div
+            style={{
+              height: '600px',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+            }}
+            className="hero-canvas"
+          >
+            <img
+              src={portfolioImg}
+              alt="Sasanka Akash — Full Stack Developer"
+              style={{
+                width: '100%',
+                maxWidth: 460,
+                height: '100%',
+                maxHeight: 520,
+                objectFit: 'cover',
+                objectPosition: 'top center',
+                borderRadius: '1.5rem',
+                border: '1px solid rgba(79,142,255,0.25)',
+                boxShadow: '0 0 40px rgba(79,142,255,0.12), 0 0 80px rgba(168,85,247,0.06)',
+              }}
+            />
           </div>
         </div>
 
